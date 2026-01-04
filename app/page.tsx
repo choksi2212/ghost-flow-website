@@ -109,7 +109,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <Link
               href="/get-started"
-              className="group px-12 py-6 bg-gradient-to-r from-[#60A5FA] to-[#93C5FD] text-[#E8E8ED] text-xl font-medium rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="group px-12 py-6 bg-gradient-to-r from-[#60A5FA] to-[#93C5FD] text-[#000000] text-xl font-medium rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <span className="flex items-center gap-2">
                 <Rocket size={20} />

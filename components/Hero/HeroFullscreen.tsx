@@ -21,15 +21,15 @@ export default function HeroFullscreen() {
             <div className="absolute inset-0 mesh-gradient opacity-40" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#60A5FA] rounded-full blur-[150px] opacity-20 animate-pulse-glow" />
 
-            <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
+            <div className="relative z-10 text-center px-6 md:px-8 max-w-7xl mx-auto w-full">
                 {/* Floating badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#16161D] border border-[#27272F] rounded-full mb-8 animate-float">
                     <Sparkles size={16} className="text-[#60A5FA]" />
                     <span className="text-sm text-[#8B8B9A]">Production-Ready ML Framework</span>
                 </div>
 
-                <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none mb-6">
-                    <span className="bg-gradient-to-r from-[#E8E8ED] via-[#BFDBFE] to-[#E8E8ED] bg-clip-text text-transparent">
+                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-6 px-4">
+                    <span className="bg-gradient-to-r from-[#E8E8ED] via-[#BFDBFE] to-[#E8E8ED] bg-clip-text text-transparent inline-block">
                         GhostFlow
                     </span>
                 </h1>
@@ -57,7 +57,7 @@ export default function HeroFullscreen() {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
                     <Link
                         href="/get-started"
-                        className="group px-10 py-5 bg-gradient-to-r from-[#60A5FA] to-[#93C5FD] text-[#E8E8ED] text-lg font-medium rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                        className="group px-10 py-5 bg-gradient-to-r from-[#60A5FA] to-[#93C5FD] text-[#000000] text-lg font-medium rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
                     >
                         <span className="flex items-center gap-2">
                             Get Started
