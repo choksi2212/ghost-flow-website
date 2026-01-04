@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Zap, BookOpen, Code2, Rocket, Github, ArrowRight } from 'lucide-react'
 import ScrollStack, { ScrollStackItem } from './ScrollStack'
@@ -89,8 +90,17 @@ export default function MinimalNav() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-[#E8E8ED] hover:text-[#60A5FA] transition-colors">
-            GhostFlow
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image 
+              src="/ghostflow.png" 
+              alt="GhostFlow Logo" 
+              width={40} 
+              height={40}
+              className="transition-transform duration-300 group-hover:scale-110"
+            />
+            <span className="text-2xl font-bold text-[#E8E8ED] group-hover:text-[#60A5FA] transition-colors">
+              GhostFlow
+            </span>
           </Link>
 
           <button

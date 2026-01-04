@@ -23,7 +23,7 @@ export default function MinimalFooter() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: '41f56cfd-ebae-4fda-9010-b00cd09276f5', // You need to get this from web3forms.com
+          access_key: '16a46b50-d923-499a-b18e-dd0e1daf959b', // You need to get this from web3forms.com
           name: formData.name,
           email: formData.email,
           message: formData.message,

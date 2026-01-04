@@ -7,12 +7,16 @@ import SmoothScrollProvider from '@/components/Providers/SmoothScrollProvider'
 import PageTransition from '@/components/Effects/PageTransition'
 
 export const metadata: Metadata = {
-  title: 'GhostFlow - High-Performance ML Framework',
+  title: 'GhostFlow',
   description: 'A blazingly fast machine learning framework built in Rust with Python bindings. 50+ algorithms, GPU acceleration, and production-ready.',
   keywords: ['machine learning', 'rust', 'python', 'ml framework', 'neural networks', 'gpu', 'cuda'],
   authors: [{ name: 'GhostFlow Team' }],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/icon.png',
+  },
   openGraph: {
-    title: 'GhostFlow - High-Performance ML Framework',
+    title: 'GhostFlow',
     description: 'Blazingly fast ML framework in Rust with Python bindings',
     type: 'website',
   },
