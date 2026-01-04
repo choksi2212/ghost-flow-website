@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode } from 'react'
-import CustomCursor from '@/components/Effects/CustomCursor'
+import { SmoothCursor } from '@/components/UI/SmoothCursor'
 import MinimalFooter from '@/components/UI/MinimalFooter'
 
 interface PageWrapperProps {
@@ -12,7 +12,7 @@ interface PageWrapperProps {
 export default function PageWrapper({ children }: PageWrapperProps) {
   return (
     <>
-      <CustomCursor />
+      <SmoothCursor />
       
       <div className="relative min-h-screen">
         <div className="relative z-10">

@@ -1,13 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 import MinimalNav from '@/components/UI/MinimalNav'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
+import SmoothScrollProvider from '@/components/Providers/SmoothScrollProvider'
+import PageTransition from '@/components/Effects/PageTransition'
 
 export const metadata: Metadata = {
   title: 'GhostFlow - High-Performance ML Framework',
@@ -27,12 +24,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased">
-        <MinimalNav />
-        <main>
-          {children}
-        </main>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="antialiased font-sans">
+        <SmoothScrollProvider>
+          <MinimalNav />
+          <PageTransition>
+            <main>
+              {children}
+            </main>
+          </PageTransition>
+        </SmoothScrollProvider>
       </body>
     </html>
   )

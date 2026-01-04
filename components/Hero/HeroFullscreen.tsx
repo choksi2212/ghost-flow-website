@@ -1,90 +1,94 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import ScrollFloat from '@/components/Effects/ScrollFloat'
+import MagneticButton from '@/components/UI/MagneticButton'
+import { Sparkles, Zap, Shield } from 'lucide-react'
 
 // Dynamically import WebGL component to prevent SSR issues
 const NeuralNetworkWebGL = dynamic(() => import('./NeuralNetworkWebGL'), {
     ssr: false,
-    loading: () => <div className="absolute inset-0 bg-black" />,
+    loading: () => <div className="absolute inset-0 bg-[#0B0B0F]" />,
 })
 
 export default function HeroFullscreen() {
     return (
-        <section className="h-screen flex items-center justify-center relative overflow-hidden bg-black">
+        <section className="h-screen flex items-center justify-center relative overflow-hidden bg-[#0B0B0F]">
             <NeuralNetworkWebGL />
 
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 mesh-gradient opacity-40" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#60A5FA] rounded-full blur-[150px] opacity-20 animate-pulse-glow" />
+
             <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                >
-                    <h1 className="text-8xl md:text-9xl lg:text-[12rem] font-bold text-white mb-8 tracking-tighter leading-none">
+                {/* Floating badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#16161D] border border-[#27272F] rounded-full mb-8 animate-float">
+                    <Sparkles size={16} className="text-[#60A5FA]" />
+                    <span className="text-sm text-[#8B8B9A]">Production-Ready ML Framework</span>
+                </div>
+
+                <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none mb-6">
+                    <span className="bg-gradient-to-r from-[#E8E8ED] via-[#BFDBFE] to-[#E8E8ED] bg-clip-text text-transparent">
                         GhostFlow
-                    </h1>
-                </motion.div>
+                    </span>
+                </h1>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-2xl md:text-4xl text-gray-400 max-w-4xl mx-auto mb-12 font-light"
-                >
-                    High-Performance Machine Learning Framework
-                </motion.p>
+                <p className="text-xl md:text-2xl text-[#8B8B9A] max-w-4xl mx-auto font-light leading-relaxed mb-12 break-words">
+                    High-Performance Machine Learning Framework Built in Rust
+                </p>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.6 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-6"
-                >
+                {/* Feature pills */}
+                <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+                    <div className="flex items-center gap-2 px-4 py-2 bg-[#16161D]/50 border border-[#27272F] rounded-lg backdrop-blur-sm">
+                        <Zap size={16} className="text-[#60A5FA]" />
+                        <span className="text-sm text-[#E8E8ED]">10x Faster</span>
+                    </div>
+                    <div className="flex items-center gap-2 px-4 py-2 bg-[#16161D]/50 border border-[#27272F] rounded-lg backdrop-blur-sm">
+                        <Shield size={16} className="text-[#10B981]" />
+                        <span className="text-sm text-[#E8E8ED]">Memory Safe</span>
+                    </div>
+                    <div className="flex items-center gap-2 px-4 py-2 bg-[#16161D]/50 border border-[#27272F] rounded-lg backdrop-blur-sm">
+                        <Sparkles size={16} className="text-[#93C5FD]" />
+                        <span className="text-sm text-[#E8E8ED]">GPU Accelerated</span>
+                    </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
                     <Link
                         href="/get-started"
-                        className="group px-10 py-5 bg-white text-black text-lg font-medium hover:bg-gray-200 transition-all duration-300 relative overflow-hidden"
+                        className="group px-10 py-5 bg-gradient-to-r from-[#60A5FA] to-[#93C5FD] text-[#E8E8ED] text-lg font-medium rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
                     >
-                        <span className="relative z-10">Get Started</span>
-                        <div className="absolute inset-0 bg-gray-100 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                        <span className="flex items-center gap-2">
+                            Get Started
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </span>
                     </Link>
 
                     <Link
                         href="https://github.com/choksi2212/ghost-flow"
                         target="_blank"
-                        className="px-10 py-5 border-2 border-white text-white text-lg font-medium hover:bg-white hover:text-black transition-all duration-300"
+                        className="px-10 py-5 bg-[#16161D] border-2 border-[#27272F] text-[#E8E8ED] text-lg font-medium hover:border-[#60A5FA] hover:bg-[#16161D]/80 transition-all duration-300 rounded-xl backdrop-blur-sm"
                     >
                         View on GitHub
                     </Link>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                    className="mt-16 inline-block"
-                >
-                    <code className="px-6 py-3 bg-white/5 border border-white/10 text-white font-mono text-sm">
-                        pip install ghost-flow
+                <div className="inline-block">
+                    <code className="px-6 py-3 bg-[#16161D]/80 border border-[#27272F] text-[#60A5FA] font-mono text-sm rounded-lg backdrop-blur-sm">
+                        $ pip install ghost-flow
                     </code>
-                </motion.div>
+                </div>
             </div>
 
             {/* Scroll indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2, duration: 1 }}
-                className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
-            >
-                <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-                    <motion.div
-                        animate={{ y: [0, 12, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                        className="w-1 h-2 bg-white rounded-full"
-                    />
+            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+                <div className="w-6 h-10 border-2 border-[#60A5FA]/30 rounded-full flex items-start justify-center p-2">
+                    <div className="w-1 h-2 bg-[#60A5FA] rounded-full animate-bounce" />
                 </div>
-            </motion.div>
+            </div>
         </section>
     )
 }

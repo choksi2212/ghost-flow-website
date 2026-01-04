@@ -9,7 +9,7 @@ function NeuralNetwork() {
 
   // Reduced node count for better performance
   const { positions, connections } = useMemo(() => {
-    const nodeCount = 80 // Reduced from 120
+    const nodeCount = 100 // Reduced from 120
     const positions = new Float32Array(nodeCount * 3)
     const connectionPositions: number[] = []
 
