@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   description: 'A blazingly fast machine learning framework built in Rust with Python bindings. 50+ algorithms, GPU acceleration, and production-ready.',
   keywords: ['machine learning', 'rust', 'python', 'ml framework', 'neural networks', 'gpu', 'cuda'],
   authors: [{ name: 'GhostFlow Team' }],
+  icons: {
+    icon: [
+      { url: '/icon.png' },
+      { url: '/ghostflow.png' },
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'GhostFlow',
     description: 'Blazingly fast ML framework in Rust with Python bindings',
@@ -25,6 +32,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head>
+        <link rel="icon" href="/ghostflow.png" type="image/png" />
+        <link rel="shortcut icon" href="/ghostflow.png" />
+      </head>
       <body className="antialiased font-sans">
         <SmoothScrollProvider>
           <MinimalNav />
