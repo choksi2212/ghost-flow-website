@@ -54,7 +54,7 @@ function NeuralNetwork() {
   return (
     <group ref={groupRef}>
       <ambientLight intensity={0.4} />
-      
+
       {/* Nodes */}
       <points>
         <bufferGeometry>
@@ -65,10 +65,10 @@ function NeuralNetwork() {
             itemSize={3}
           />
         </bufferGeometry>
-        <pointsMaterial 
-          size={0.12} 
-          color="#FFFFFF" 
-          transparent 
+        <pointsMaterial
+          size={0.12}
+          color="#FFFFFF"
+          transparent
           opacity={0.7}
           sizeAttenuation={true}
         />
@@ -85,9 +85,9 @@ function NeuralNetwork() {
               itemSize={3}
             />
           </bufferGeometry>
-          <lineBasicMaterial 
-            color="#FFFFFF" 
-            transparent 
+          <lineBasicMaterial
+            color="#FFFFFF"
+            transparent
             opacity={0.12}
           />
         </lineSegments>
@@ -101,7 +101,7 @@ export default function NeuralNetworkWebGL() {
     <div className="absolute inset-0 z-0 bg-black pointer-events-none">
       <Canvas
         camera={{ position: [0, 0, 10], fov: 70 }}
-        gl={{ 
+        gl={{
           antialias: false, // Disabled for performance
           alpha: false,
           powerPreference: 'high-performance',

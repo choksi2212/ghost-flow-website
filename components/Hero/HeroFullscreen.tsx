@@ -25,7 +25,7 @@ export default function HeroFullscreen() {
                 {/* Floating badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#16161D] border border-[#27272F] rounded-full mb-8 animate-float">
                     <Sparkles size={16} className="text-[#60A5FA]" />
-                    <span className="text-sm text-[#8B8B9A]">Production-Ready ML Framework</span>
+                    <span className="text-sm text-[#8B8B9A]">v0.3.0 Released - 77+ ML Algorithms</span>
                 </div>
 
                 <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-6 px-4">
@@ -42,7 +42,7 @@ export default function HeroFullscreen() {
                 <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
                     <div className="flex items-center gap-2 px-4 py-2 bg-[#16161D]/50 border border-[#27272F] rounded-lg backdrop-blur-sm">
                         <Zap size={16} className="text-[#60A5FA]" />
-                        <span className="text-sm text-[#E8E8ED]">10x Faster</span>
+                        <span className="text-sm text-[#E8E8ED]">XGBoost & LightGBM</span>
                     </div>
                     <div className="flex items-center gap-2 px-4 py-2 bg-[#16161D]/50 border border-[#27272F] rounded-lg backdrop-blur-sm">
                         <Shield size={16} className="text-[#10B981]" />
@@ -50,7 +50,7 @@ export default function HeroFullscreen() {
                     </div>
                     <div className="flex items-center gap-2 px-4 py-2 bg-[#16161D]/50 border border-[#27272F] rounded-lg backdrop-blur-sm">
                         <Sparkles size={16} className="text-[#93C5FD]" />
-                        <span className="text-sm text-[#E8E8ED]">GPU Accelerated</span>
+                        <span className="text-sm text-[#E8E8ED]">GMM, HMM, CRF</span>
                     </div>
                 </div>
 

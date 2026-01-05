@@ -35,9 +35,9 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/ghostflow.png" type="image/png" />
         <link rel="shortcut icon" href="/ghostflow.png" />
-        <script 
-          defer 
-          src="https://cloud.umami.is/script.js" 
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
           data-website-id="cfa8a7ac-e2c0-4abe-898f-4ac91c4cfb10"
         />
       </head>
